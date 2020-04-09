@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Fema</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</h:head>
+<h:body class="bg-info" onload="setFocus('form:nome');">
+	<h:form id="form">
+		<h:outputLabel value="Codigo"></h:outputLabel>
+		<br />
+		<h:inputText value="#{estudanteControlador.estudante.codigo}"></h:inputText>
+		<br/>
+		<h:outputLabel value="nome" ></h:outputLabel>
+		<br/>
+		<h:inputText value="#{estudanteControlador.estudante.nome}"></h:inputText>
+		<br/>
+		<h:outputLabel value="email" ></h:outputLabel>
+		<br/>
+		<h:inputText value="#{estudanteControlador.estudante.email}"></h:inputText>
+		<br/>
+		<h:outputLabel value="Situação" ></h:outputLabel>
+		<br/>		
+		<h:selectOneMenu value="#{estudanteControlador.itemSelecionar}">
+			<f:selectItems value="#{estudanteControlador.itensSelect}"></f:selectItems>
+		</h:selectOneMenu>
+		<br/>
+		<h:commandButton value="Cadastrar" action="#{estudanteControlador.cadastrarEstudante}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Fema</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</h:head>
+<h:body>
+	<h:form id="form">
+		<h:dataTable border="1" value="#{estudanteControlador.estudantes}" var="est" >
+			<h:column id="column1">
+				<f:facet name="header">
+					<h:outputText value="Codigo"></h:outputText>
+				</f:facet>
+				<h:outputText value="#{est.codigo}"></h:outputText>
+			</h:column>
+			<h:column id="column2">
+				<f:facet name="header">
+					<h:outputText value="Nome"></h:outputText>
+				</f:facet>
+				<h:outputText value="#{est.nome}"></h:outputText>
+			</h:column>
+			<h:column id="column3">
+				<f:facet name="header">
+					<h:outputText value="Email"></h:outputText>
+				</f:facet>
+				<h:outputText value="#{est.email}"></h:outputText>
+			</h:column>
+			<h:column id="column5">
+				<f:facet name="header">
+					<h:outputText value="Situacao"></h:outputText>
+				</f:facet>
+				<h:outputText value="#{est.situacao}"></h:outputText>
+			</h:column>
+			<h:column id="column4">
+				<f:facet name="header">
+					<h:outputText value="Excluir"></h:outputText>
+				</f:facet>
+				<h:commandButton value="Excluir" action="#{estudanteControlador.prepararRemocaoEstudante(est)}"></h:commandButton>
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>

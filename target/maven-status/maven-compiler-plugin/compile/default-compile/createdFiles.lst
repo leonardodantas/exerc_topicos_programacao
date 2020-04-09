@@ -1,0 +1,10 @@
+sistema\controlador\EstudanteControlador.class
+sistema\dao\CursoDao.class
+sistema\controlador\Controlador.class
+sistema\beans\Estudante.class
+sistema\dao\EstudanteDao.class
+sistema\controlador\CursoControlador.class
+sistema\beans\Aluno.class
+sistema\beans\Curso.class
+sistema\beans\Turma.class
+sistema\beans\TurmaEstudante.class
